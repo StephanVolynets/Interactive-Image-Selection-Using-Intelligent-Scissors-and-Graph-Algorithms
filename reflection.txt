@@ -1,0 +1,43 @@
+# Assignment 6 reflection
+
+## Submitter metadata
+
+Partner 1: Firstname Lastname (NetID)  - Stephan Volynets (svv6)
+
+Hours spent working on this assignment: 12.5
+
+## Verification questions
+
+1. Approximately how much faster does your app finish processing the clocktower
+   image when using your `HeapMinQueue` vs. the `RefMinQueue`?  (with assertions
+   disabled)
+
+   Answer: Much faster, at least a second.
+
+## Reflection questions
+
+1. When completing A5, did you make any assumptions specific to point-to-point
+   selections that you had to relax or fix in order to work with A6's new
+   selection model?  What do you think would be a good technique to help
+   developers avoid assuming things beyond what's specified in an interface?
+
+   Answer: n A5, I may have assumed start and end points were on the same object,
+   which doesn't hold for A6's region selection model. To avoid assumptions beyond the interface,
+   thoroughly read documentation, test edge cases, and write unit tests that can catch these
+   assumptions.
+
+2. Describe your custom weigher(s) and what inspired you to do the calculations
+   that you did.
+
+   Answer: My LuminanceGradientWeigher considers pixel luminance (weighted sum of RGB)
+    instead of just grayscale intensity, to better handle images with different colors
+    but similar brightness levels. The inspiration for this weigher came from the fact that
+    the CrossGradMonoWeight weigher, which uses only the grayscale intensity, may not work well
+    for images with different colors that have similar brightness levels.
+
+3. What is your favorite thing you learned or accomplished in CS 2110?
+
+   Answer:
+   My favorite things learned were OOP principles like encapsulation and design patterns,
+   as well as algorithms and data structures. Implementing the Intelligent Scissors algorithm,
+   understanding it, and seeing it work was a proud accomplishment.
